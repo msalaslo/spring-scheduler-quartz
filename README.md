@@ -10,7 +10,7 @@ This is the first example where we configure a basic scheduler.
 ##### Spring boot application, Main class
 
 
-`com.msl.spirng.springscheduler.SpringQuartzApp`
+`com.msl.spring.springscheduler.SpringQuartzApp`
 
 ##### Configuration in *application.properties*
 
