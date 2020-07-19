@@ -10,6 +10,6 @@ spring:
       reload:
         enabled: false
 server:
-  port: 8080
+  port: ${SERVER_PORT}
   ssl:
     enabled: false

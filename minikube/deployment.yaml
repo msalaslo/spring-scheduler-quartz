@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-backend
+spec:
+  selector:
+      matchLabels:
+        app: spring-scheduler-one
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: spring-scheduler-one
+    spec:
+      containers:
+        - name: spring-scheduler-one
+          image: spring-scheduler-one:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

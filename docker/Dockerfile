@@ -14,7 +14,7 @@ COPY docker/$NAME-$VERSION.jar $NAME.jar
 RUN jar -xf $NAME.jar
 
 # Base Image
-FROM docker-sd.faas.securitasdirect.local/spring-boot-microservice:java11
+FROM docker-sd.faas.securitasdirect.local/pss/spring-boot-microservice:java11
 # Copy classes from builder image
 ARG DEPENDENCY=/workspace/app/
 COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib

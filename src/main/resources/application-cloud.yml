@@ -1,12 +1,9 @@
 # Cloud config for dockerized environments.
 spring:
   profiles: cloud
-  cloud:
-    kubernetes:
-        reload:
-            enabled: true
-            strategy: refresh
-
+  datasource:
+    jdbcUrl: jdbc:mysql://mysql:3306/spring-quartz?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    
 management:
   # Management endpoints explicitly enabled to be used by K8S (configmap and secret hot update)
   endpoint:
