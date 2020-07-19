@@ -25,3 +25,4 @@ nbdist/
 .nb-gradle/
 
 *.log
+/application-local.2020-07-18.log.gz
