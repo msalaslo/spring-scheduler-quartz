@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-backend
+  name: spring-scheduler-quartz
 spec:
   selector:
       matchLabels:
-        app: spring-scheduler-one
+        app: spring-scheduler-quartz
   replicas: 3
   template:
     metadata:
       labels:
-        app: spring-scheduler-one
+        app: spring-scheduler-quartz
     spec:
       containers:
-        - name: spring-scheduler-one
-          image: spring-scheduler-one:latest
+        - name: spring-scheduler-quartz
+          image: spring-scheduler-quartz:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
